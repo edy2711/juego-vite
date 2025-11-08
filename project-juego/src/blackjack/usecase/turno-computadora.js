@@ -1,5 +1,5 @@
-import { pedirCarta } from './';
-import { valorCarta } from './';
+import { pedirCarta } from './pedir-carta.js';
+import { valorCarta } from './valor-carta.js';
 // turno de la computadora
 /**
  * 
@@ -11,10 +11,10 @@ import { valorCarta } from './';
 export const turnoComputadora = ( puntosMinimos, puntosHTML,divCartasComputadora, deck = [] ) => {
     if (!puntosMinimos) throw new Error('Puntos minimos son necesarios');
     if (!puntosHTML) throw new Error('Puntos HTML son necesarios');
-
+    let puntosComputadora = 0;
     do {
         const carta = pedirCarta(deck);
-        let puntosComputadora = 0;
+     
 
         puntosComputadora = puntosComputadora + valorCarta( carta );
         puntosHTML.innerText = puntosComputadora;
