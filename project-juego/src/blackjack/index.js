@@ -1,4 +1,4 @@
-
+import { crearDeck } from './usecase/deck-function.js';
 /**
  * 2C = Two of Clubs
  * 2D = Two of Diamonds
@@ -25,7 +25,7 @@ const puntosHTML = document.querySelectorAll('small');
 
 
 
-crearDeck();
+deck=crearDeck(tipos, especiales);
 
 
 // Esta función me permite tomar una carta
